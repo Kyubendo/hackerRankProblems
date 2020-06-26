@@ -15,9 +15,10 @@ function formingMagicSquare(s) {
     console.log(ver,hor,diag)
 }
 
-s = [ [ 4, 8, 2 ],
-      [ 4, 5, 7 ],
-      [ 6, 1, 6 ] ]
+const s = [
+    [ 4, 8, 2 ],
+    [ 4, 5, 7 ],
+    [ 6, 1, 6 ] ]
 
 
 // 4 8 2
