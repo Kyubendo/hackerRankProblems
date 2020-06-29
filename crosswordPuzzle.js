@@ -40,8 +40,6 @@ function crosswordPuzzle(arr, hints) {
                }
             }
         }
-
-
     }
     putWords()
     console.log(horW)

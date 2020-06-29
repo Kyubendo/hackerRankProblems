@@ -15,19 +15,14 @@ function nonDivisibleSubset(k, s) {
             max = cur.length
             return;
         }
-
+        if (s.length-cur.length<=max) return;
         if (checkMod(cur)) return;
-
-        comb(cur.concat(rest[0]), rest.slice(1),flag)
+        comb(cur.concat(rest.slice(0,1)), rest.slice(1),flag)
         if (cur.length + rest.length - 1 <= max) return;
         if(cur.slice(-2,-1)&&(!(cur.slice(-2,-1)%k))&&(k!==1)){
-            if (flag) {
-                return;
-            }
+            if (flag) return;
             flag = 1
         }
-
-
         comb(cur, rest.slice(1),flag)
     }
 
@@ -39,8 +34,9 @@ const s = [278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575,
     161, 172, 183, 194, 205, 216, 227, 238, 249, 250, 261, 272, 283, 294, 305,
     318, 327, 332, 341, 357, 366, 378, 385, 392, 405,
     418, 427, 432, 441, 453, 462, 471, 489, 492, 507,
-    568, 527, 512, 561, 563, 522, 561, 559, 562, 607]
-const k = 3
+    568, 527, 512, 561, 563, 522, 561, 559, 562, 607
+    ]
+let k=3
 
 const t0 = performance.now()
 console.log(nonDivisibleSubset(k, s, 0))
