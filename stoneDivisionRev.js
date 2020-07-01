@@ -10,9 +10,6 @@ function stoneDivision(n, s) {
 
     function getFactors(num) {
         const facArr = []
-        // for (let i = 2; i < num; i++) {
-        //     num / i === ~~(num / i) && s.includes(num/i) &&  i !== 1 && facArr.push(i)
-        // }
         for (let i of s) {
             ( num/ i) === ~~( num/ i) &&  num!==i &&  facArr.push( num/ i)
         }
@@ -53,9 +50,7 @@ function stoneDivision(n, s) {
             moves+=maxNumCount
             division(newArr, moves,depth++)
             moves = moves1
-
         }
-
     }
 
     division(arr)
@@ -63,10 +58,12 @@ function stoneDivision(n, s) {
 }
 
 const n = 377083280820
-
 const s = [1, 377083280820, 2, 188541640410, 3, 125694426940, 4, 94270820205, 5, 754166]
+
 // const n = 64
 // const s = [2, 4, 8, 16, 64]
+
+
 console.log(stoneDivision(n, s));
 
 // const a = [[12,1]]
